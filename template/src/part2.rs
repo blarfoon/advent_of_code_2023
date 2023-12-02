@@ -8,6 +8,7 @@ mod tests {
     use super::*;
 
     #[test]
+    #[tracing_test::traced_test]
     fn test_process() -> anyhow::Result<()> {
         let input = include_str!("../input2.txt");
 
