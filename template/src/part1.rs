@@ -9,6 +9,15 @@ mod tests {
 
     #[test]
     #[tracing_test::traced_test]
+    fn test_process_small() -> anyhow::Result<()> {
+        let input = include_str!("../input1_small.txt");
+
+        assert_eq!("", process(input)?);
+        Ok(())
+    }
+
+    #[test]
+    #[tracing_test::traced_test]
     fn test_process() -> anyhow::Result<()> {
         let input = include_str!("../input1.txt");
 
