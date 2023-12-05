@@ -1,12 +1,11 @@
 [package]
-name = "day-01"
+name = "day-04"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-hashbrown = "0.14"
 anyhow = { workspace = true }
 tracing = { workspace = true }
 tracing-subscriber = { workspace = true }
@@ -18,6 +17,6 @@ divan = { workspace = true }
 tracing-test = { workspace = true }
 
 [[bench]]
-name = "day-01"
+name = "day-04"
 path = "benches/benchmarks.rs"
 harness = false

@@ -1,5 +1,3 @@
-use std::collections::HashMap;
-
 use rayon::{iter::ParallelIterator, str::ParallelString};
 
 const DIGITS: [(&str, u8); 9] = [
@@ -28,8 +26,8 @@ fn concatenate_ints(a: u32, b: u32) -> u32 {
 
 #[tracing::instrument]
 pub fn process(input: &str) -> anyhow::Result<u32> {
-    let mut hashmap = HashMap::new();
-    let mut rev_hashmap = HashMap::new();
+    let mut hashmap = hashbrown::HashMap::new();
+    let mut rev_hashmap = hashbrown::HashMap::new();
 
     for i in 0..9 {
         let (word, value) = DIGITS[i];
